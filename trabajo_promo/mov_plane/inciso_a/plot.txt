@@ -1,0 +1,68 @@
+
+set terminal postscript color
+set output "orb_tie.ps"
+set grid
+set size square
+set title "Orbita planetaria"
+set xlabel "x (au)"
+set ylabel "y (au)"
+plot "2c_solu.dat" u 2:4 w l lw 2 t "y vs x"
+reset
+
+set terminal postscript color
+set output "velx_t.ps"
+set grid
+set title "Velocidad en x en funcion del tiempo"
+set xlabel "Tiempo (d)"
+set ylabel "Velocidad en x (au/d)"
+plot "2c_solu.dat" u 1:3 w l lw 2 t "vx vs t"
+reset
+
+set terminal postscript color
+set output "vely_t.ps"
+set grid
+set title "Velocidad en y en funcion del tiempo"
+set xlabel "Tiempo (d)"
+set ylabel "Velocidad en y (au/d)"
+plot "2c_solu.dat" u 1:5 w l lw 2 t "vy vs t"
+reset
+
+set terminal postscript color
+set output "T_t.ps"
+set format y "%e"
+set grid
+set title "Energia cinetica en funcion del tiempo"
+set xlabel "Tiempo (d) "
+set ylabel "Energia Cinetica (Ms*au/d)"
+plot "2c_solu.dat" u 1:6 w l lw 2 t "T vs t"
+reset
+
+set terminal postscript color
+set output "U_t.ps"
+set format y "%e"
+set grid
+set title "Energia potencial en funcion del tiempo"
+set xlabel "Tiempo (d)"
+set ylabel "Energia Potencial (Ms*au/d)"
+plot "2c_solu.dat" u 1:7 w l lw 2 t "U vs t"
+reset
+
+set terminal postscript color
+set output "E_t.ps"
+set format y "%e"
+set grid
+set title "Energia mecanica en funcion del tiempo"
+set xlabel "Tiempo (d)"
+set ylabel "Energia Mecanica (Ms*au/d)"
+plot "2c_solu.dat" u 1:8 w l lw 2 t "E vs t"
+reset
+
+set terminal postscript color
+set output "U_r.ps"
+set format y "%e"
+set grid
+set title "Energia potencial en funcion de r"
+set xlabel "r (au)"
+set ylabel "Energia Potencial (Ms*au/d)"
+plot "pot_vs_r.dat" u 1:2 w l lw 2 t "U vs r"
+reset
