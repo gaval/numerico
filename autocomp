@@ -6,29 +6,21 @@ ls
 
 # --------------------------------------------------------------
 
-# echo 'The name of this script is  '$0
-
-# echo $#
-# echo $*
-
-N=$#
-
-
 echo 'Compiling '${1}'.f90'
-
 
 echo '# of arguments passed :'$#
 
+
 if [ $# -eq 1 ]; then
 
-	echo 'No modules added, compiling '${!#}'.f90'
-	gfortran -o ${!#}.e ${!#}.f90
+	echo 'No modules added, compiling '${1}'.f90'
+	gfortran -o ${1}.e ${1}.f90
 
 fi	
 
 
-echo 'There were modules added, compiling with modules'
 
+echo 'There were modules added, compiling with modules'
 
 
 for i in ${@:2}
@@ -50,6 +42,3 @@ echo 'Now, run '${1}'.e: '
 
 ./${1}.e
 
-
-
-# syntax compauto <main> <mod1> <mod2> ... <modn> 

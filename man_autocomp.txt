@@ -6,5 +6,5 @@ SINTAX
 
 ./autocomp [MAIN] [MOD1] ... [MODN] (skip the ./ if autocomp is already in /usr/local/bin)
 
-For the script to available to all users as a systemwide executable, move autocomp to /usr/local/bin as root (i.e type in the terminal '$> sudo cp autocomp /usr/local/bin').
+For the script to be available to all users as a systemwide executable, move autocomp to /usr/local/bin as root (i.e type in the terminal '$> sudo cp autocomp /usr/local/bin').
 Then the script could be invoked simply by typing '$> autocomp [main] [mod1] ... [modN]'
